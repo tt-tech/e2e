@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { UserService } from 'src/app/services/user.service';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {UserService} from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -9,17 +9,19 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   loginForm = this.formBuilder.group({
     email: ['', Validators.email],
-    password: ['', Validators.required],
+    password: ['', Validators.required]
   });
 
   // userId = '';
-  constructor(private userService: UserService, private formBuilder: FormBuilder, private router: Router) { }
+  constructor(
+    private userService: UserService,
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   // login function: logs a user with the provided password and email.
   login() {

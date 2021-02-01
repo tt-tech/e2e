@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyATRJfUNXNs8FCyuyT2kyL3QLkcJvrRK6Q",
-    authDomain: "ng5-complete-guide.firebaseapp.com",
-    databaseURL: "https://angular-firebase-app-b8d44.firebaseio.com",
-    projectId: "ng5-complete-guide",
-    storageBucket: "ng5-complete-guide.appspot.com",
-    messagingSenderId: "1036783479475"
+    apiKey: 'AIzaSyATRJfUNXNs8FCyuyT2kyL3QLkcJvrRK6Q',
+    authDomain: 'ng5-complete-guide.firebaseapp.com',
+    databaseURL: 'https://angular-firebase-app-b8d44.firebaseio.com',
+    projectId: 'ng5-complete-guide',
+    storageBucket: 'ng5-complete-guide.appspot.com',
+    messagingSenderId: '1036783479475'
   }
 };
 

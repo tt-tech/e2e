@@ -1,4 +1,4 @@
 interface User {
-    uid: string,
-    fcmToken: string;
+  uid: string;
+  fcmToken: string;
 }

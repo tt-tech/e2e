@@ -1,32 +1,32 @@
 .container {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .jumbotron {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 #register-btn {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 #login-form-container {
-    width: 30%;
-    height: fit-content;
+  width: 30%;
+  height: fit-content;
 }
 
 #login-heading {
-    text-align: center;
+  text-align: center;
 }
 
 #btn-login {
-    border-radius: 15px;
-    margin-left: 30%;
-    margin-right: 30%;
-    width: 40%;
+  border-radius: 15px;
+  margin-left: 30%;
+  margin-right: 30%;
+  width: 40%;
 }
 
 p {
-    margin-top: 5%;
-    text-align: center;
+  margin-top: 5%;
+  text-align: center;
 }
