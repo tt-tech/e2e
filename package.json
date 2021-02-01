@@ -4,9 +4,12 @@
   "scripts": {
     "ng": "ng",
     "e2e": "testcafe chrome e2e/fixtures --disable-multiple-windows",
+    "e2e:slow": "testcafe chrome e2e/fixtures --disable-multiple-windows --speed 0.7",
     "format": "prettier --write '**/*.{ts,js,scss,html,css,md,json}'",
-    "start": "ng serve",
+    "start": "ng serve & npm run e2e",
+    "start:slow": "ng serve & npm run e2e:slow",
     "build": "ng build",
+    "stop": "./stop.sh",
     "test": "ng test",
     "lint": "ng lint"
   },
