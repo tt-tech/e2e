@@ -25,6 +25,7 @@
         "@angular/platform-browser": "~8.2.12",
         "@angular/platform-browser-dynamic": "~8.2.12",
         "@angular/router": "~8.2.12",
+        "chancejs": "^0.0.8",
         "firebase": "^7.2.2",
         "firebase-tools": "^7.6.2",
         "rxjs": "~6.4.0",
