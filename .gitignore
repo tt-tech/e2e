@@ -1,0 +1,11 @@
+.idea/*
+node_modules/*
+screenshots/*
+*.iml
+reports/
+.vscode/settings.json
+artifacts
+.testcaferc.json
+server/
+.DS_Store
+.eslintcache
