@@ -10,7 +10,4 @@ Run `ng run stop` for killing the ports.
 
 ## Tasks:
 
-### Task 1:
-
-- Create a new user in the system every time the test is started. (generate automatically a name)
-- Login with the created use and validate the dashboard is show (validate the email is shown in the header)
+Trello project link: https://trello.com/c/GVhUDOC7/1-register-a-new-user-via-e2e-use-https-vocajscom-library-to-generate-names-for-the-email
