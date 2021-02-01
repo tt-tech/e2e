@@ -4,7 +4,8 @@
   "description": "Get started with Testcafe!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "testcafe chrome fixtures --disable-multiple-windows",
+    "format": "prettier --write '**.js'"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,15 @@
     "url": "https://github.com/tt-tech/e2e/issues"
   },
   "homepage": "https://github.com/tt-tech/e2e#readme",
-  "devDependencies": {
+  "dependencies": {
     "testcafe": "^1.10.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/parser": "^7.9.6",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "@babel/preset-env": "^7.6.2"
   }
 }
