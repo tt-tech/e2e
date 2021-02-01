@@ -1,29 +1,53 @@
 {
-  "name": "e2e-testcafe",
-  "version": "0.0.1",
-  "description": "Get started with Testcafe!",
-  "main": "index.js",
+  "name": "angular-firebase-app",
+  "version": "0.0.0",
   "scripts": {
-    "start": "testcafe chrome fixtures --disable-multiple-windows",
-    "format": "prettier --write '**.js'"
+    "ng": "ng",
+    "e2e": "testcafe chrome e2e/fixtures --disable-multiple-windows",
+    "format": "prettier --write '**.{js, ts}'",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tt-tech/e2e.git"
-  },
-  "keywords": [
-    "testcafe"
-  ],
-  "author": "Adil Ben Moussa",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tt-tech/e2e/issues"
-  },
-  "homepage": "https://github.com/tt-tech/e2e#readme",
+  "private": true,
   "dependencies": {
-    "testcafe": "^1.10.1"
+    "@angular/animations": "~8.2.12",
+    "@angular/common": "~8.2.12",
+    "@angular/compiler": "~8.2.12",
+    "@angular/core": "~8.2.12",
+    "@angular/fire": "^5.2.1",
+    "@angular/forms": "~8.2.12",
+    "@angular/platform-browser": "~8.2.12",
+    "@angular/platform-browser-dynamic": "~8.2.12",
+    "@angular/router": "~8.2.12",
+    "firebase": "^7.2.2",
+    "firebase-tools": "^7.6.2",
+    "rxjs": "~6.4.0",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
+    "testcafe": "^1.10.1",
+    "@angular-devkit/build-angular": "~0.803.15",
+    "@angular/cli": "~8.3.15",
+    "@angular/compiler-cli": "~8.2.12",
+    "@angular/language-service": "~8.2.12",
+    "@types/node": "~8.9.4",
+    "@types/jasmine": "~3.3.8",
+    "@types/jasminewd2": "~2.0.3",
+    "codelyzer": "^5.0.0",
+    "jasmine-core": "~3.4.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.1.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.0",
+    "protractor": "~5.4.0",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.15.0",
+    "typescript": "~3.5.3",
     "@babel/core": "^7.6.2",
     "@babel/node": "^7.6.2",
     "@babel/parser": "^7.9.6",
