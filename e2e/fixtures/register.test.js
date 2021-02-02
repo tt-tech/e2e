@@ -1,6 +1,6 @@
 import { URLS } from '../utils/route.util';
 import { RegisterElements } from '../page-objects/register.po';
-
+//Declare chance
 const Chance = require('chance');
 const chanceObj = new Chance();
 
