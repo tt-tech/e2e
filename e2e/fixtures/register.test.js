@@ -17,5 +17,5 @@ test('test for new user', async t => {
         .typeText(RegisterElements.name, username)
         .typeText(RegisterElements.email, email)
         .typeText(RegisterElements.password, passwords)
-        .click(RegisterElements.Btnregister)
+        .click(RegisterElements.btnRegister)
 });
