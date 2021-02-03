@@ -6,5 +6,5 @@ export function composePath(route) {
 
 export const URLS = {
     LOGIN: composePath('login'),
-    Register_Page: composePath('register')
+    REGISTER: composePath('register')
 };
