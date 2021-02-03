@@ -5,7 +5,7 @@ fixture('Welcome For login').page(URLS.LOGIN);
 
 test('test for login ', async t => {
     //Arrange
-    const email = 'chester-mills@gmail.com';
+    const email = 'donald-gregory@gmail.com';
     const password = 'Testing';
 
     //Act
