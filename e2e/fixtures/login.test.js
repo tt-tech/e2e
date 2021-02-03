@@ -13,5 +13,5 @@ test('test for login ', async t => {
     .typeText(loginElements.password, password)
     .click(loginElements.btnLogin);
   //Assert
-  await t.expect(loginElements.helloUser.innerText).contains(email);
+  t.expect(loginElements.helloUser.innerText).contains(email);
 });
