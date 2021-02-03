@@ -1,8 +1,8 @@
-import {Selector} from 'testcafe';
+import { Selector } from 'testcafe';
 
 export const loginElements = {
-  email: Selector('#email'),
-  password: Selector('#password'),
-  btnLogin: Selector('button').withText('Login'),
-  helloUser: Selector('#hello-user')
+    email: Selector('#email'),
+    password: Selector('#password'),
+    btnLogin: Selector('button').withText('Login'),
+    helloUser: Selector('span').withText('Hello'),
 };
