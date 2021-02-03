@@ -7,15 +7,15 @@ const chanceObj = new Chance();
 const user = chanceObj.name();
 const username = user.toLowerCase();
 const email = username.replace(' ', '-') + '@gmail.com';
-const passwords = "Testing";
+const password = "Testing";
 
-fixture('Welcome For Register!').page(URLS.REGISTER);
+fixture('Welcome For Register page').page(URLS.REGISTER);
 
 test('test for new user', async t => {
     //Act
     await t
         .typeText(RegisterElements.name, username)
         .typeText(RegisterElements.email, email)
-        .typeText(RegisterElements.password, passwords)
+        .typeText(RegisterElements.password, password)
         .click(RegisterElements.btnRegister)
 });
