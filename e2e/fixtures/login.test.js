@@ -1,19 +1,19 @@
-import { URLS } from '../utils/route.util';
-import { loginElements } from '../page-objects/login.po';
+import {URLS} from '../utils/route.util';
+import {loginElements} from '../page-objects/login.po';
 
 fixture('Welcome For login').page(URLS.LOGIN);
 
 test('test for login ', async t => {
-    //Arrange
-    const email = 'donald-gregory@gmail.com';
-    const password = 'Testing';
+  //Arrange
+  const email = 'donald-gregory@gmail.com';
+  const password = 'Testing';
 
-    //Act
-    await t
-        .typeText(loginElements.email, email)
-        .typeText(loginElements.password, password)
-        .click(loginElements.btnLogin)
+  //Act
+  await t
+    .typeText(loginElements.email, email)
+    .typeText(loginElements.password, password)
+    .click(loginElements.btnLogin);
 
-    //Assert
-    await t.expect(loginElements.helloUser.innerText).contains(email);
+  //Assert
+  await t.expect(loginElements.helloUser.innerText).contains(email);
 });
