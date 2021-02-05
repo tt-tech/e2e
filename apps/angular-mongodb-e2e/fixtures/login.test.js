@@ -16,7 +16,7 @@ test.only('test for login ', async t => {
 
     //Assert
     //await t.eval(() => location.reload(true));
-    await t.pressKey('Command+R');
+    await t.eval(() => window.location.reload);
     await t.wait(4000)
         //     await t.expect(RegisterElements.username.exists).ok();
         //     await t.expect(RegisterElements.helloUser.innerText).contains(username);
