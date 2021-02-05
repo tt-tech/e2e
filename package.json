@@ -27,16 +27,16 @@
     "@nrwl/angular": "11.2.10",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "chance": "^1.1.7",
+    "chancejs": "^0.0.8",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.15",
     "rxjs": "~6.6.3",
-    "tslib": "^2.0.0",
-    "zone.js": "^0.10.2",
     "testcafe": "^1.10.1",
-    "chance": "^1.1.7",
-    "chancejs": "^0.0.8"
+    "tslib": "^2.0.0",
+    "zone.js": "^0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1100.1",
@@ -59,9 +59,9 @@
     "jest": "26.2.2",
     "jest-preset-angular": "8.3.2",
     "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
     "ts-jest": "26.4.0",
     "ts-node": "~9.1.1",
-    "typescript": "~4.0.3",
-    "pretty-quick": "^2.0.1"
+    "typescript": "~4.0.3"
   }
 }
