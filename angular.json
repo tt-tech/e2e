@@ -1,60 +1,60 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "$schema": "angular-mongodb/node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-firebase-app": {
+    "angular-mongodb": {
       "projectType": "application",
-      "schematics": {},
-      "root": "",
-      "sourceRoot": "src",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "apps/angular-mongodb",
+      "sourceRoot": "apps/angular-mongodb/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-firebase-app",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
-            "aot": false,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/firebase-messaging-sw.js",
-              "src/manifest.json"
-            ],
-            "styles": ["src/styles.css"],
+            "outputPath": "dist/angular-mongodb",
+            "index": "apps/angular-mongodb/src/index.html",
+            "main": "apps/angular-mongodb/src/main.ts",
+            "polyfills": "apps/angular-mongodb/src/polyfills.ts",
+            "tsConfig": "apps/angular-mongodb/tsconfig.app.json",
+            "aot": true,
+            "assets": ["apps/angular-mongodb/src/favicon.ico", "apps/angular-mongodb/src/assets"],
+            "styles": ["apps/angular-mongodb/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "apps/angular-mongodb/environments/environment.ts",
+                  "with": "apps/angular-mongodb/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ]
             }
@@ -63,36 +63,28 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-firebase-app:build"
+            "browserTarget": "angular-mongodb:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-firebase-app:build:production"
+              "browserTarget": "angular-mongodb:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-firebase-app:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.css"],
-            "scripts": []
+            "browserTarget": "angular-mongodb:build"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json", "e2e/tsconfig.json"],
+            "tsConfig": [
+              "apps/angular-mongodb/tsconfig.app.json",
+              "apps/angular-mongodb/tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
             "exclude": ["**/node_modules/**"]
           }
         },
@@ -100,16 +92,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-firebase-app:serve"
+            "devServerTarget": "angular-mongodb:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-firebase-app:serve:production"
+              "devServerTarget": "angular-mongodb:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-firebase-app"
+  "defaultProject": "angular-mongodb",
+  "cli": {
+    "analytics": "e2bddea3-3cf1-43be-9b28-4dfc3488a9f9"
+  }
 }
