@@ -5,8 +5,8 @@ fixture('Welcome For login').page(URLS.LOGIN);
 
 test.only('test for login ', async t => {
     //Arrange
-    const username = 'adil.benmoussa';
-    const password = 'testing';
+    const username = 'steven.reyes';
+    const password = 'Testing';
 
     //Act
     await t
@@ -15,8 +15,10 @@ test.only('test for login ', async t => {
         .click(loginElements.btnLogin);
 
     //Assert
-    //     await t.eval(() => location.reload(true));
-    //     await t.expect(RegisterElements.username.exists).ok();
-    //     await t.expect(RegisterElements.helloUser.innerText).contains(username);
-    // 
+    //await t.eval(() => location.reload(true));
+    await t.pressKey('CMD+R');
+    await t.wait(4000)
+        //     await t.expect(RegisterElements.username.exists).ok();
+        //     await t.expect(RegisterElements.helloUser.innerText).contains(username);
+        // 
 });
