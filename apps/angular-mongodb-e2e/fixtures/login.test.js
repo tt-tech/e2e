@@ -18,5 +18,4 @@ test.only('test for login ', async t => {
     await t.eval(() => window.location.reload);
     // await t.expect(RegisterElements.username.exists).ok();
     // await t.expect(RegisterElements.helloUser.innerText).contains(username);
-
 });
