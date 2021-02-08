@@ -13,5 +13,6 @@ test.only('test for new user ', async t => {
     .typeText(registerElements.email, person.email)
     .typeText(registerElements.password, person.password)
     .click(registerElements.btnRegister);
+    
   //Assert
 });
