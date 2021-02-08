@@ -1,12 +1,15 @@
 import { URLS } from '../utils/route.util';
-import { loginElements, homePage } from '../page-objects/login.po';
+import { loginElements } from '../page-objects/login.po';
+import { homePage } from '../page-objects/home.po';
+import { password } from '../utils/constant.util';
 
-fixture('Welcome For login').page(URLS.LOGIN);
+fixture('Welcome For home ').page(URLS.LOGIN);
 
-test.only('test for login ', async t => {
+test.only('test for home page ', async t => {
     //Arrange
-    const username = 'tony.perry';
-    const password = 'Testing';
+    const username = 'peter.flowers';
+    const title = 'javascript';
+    const description = 'testing project with testcafe ';
     //Act
     await t
         .typeText(loginElements.username, username)
@@ -15,8 +18,12 @@ test.only('test for login ', async t => {
     await t.eval(() => location.reload(true));
     await t
         .click(homePage.addTutorial)
-        .typeText(homePage.title, 'javascript (e2e)')
-        .typeText(homePage.description, 'testing project with testcafe ')
-        .wait(4000);
+        .typeText(homePage.title, title)
+        .typeText(homePage.description, description)
+        .click(homePage.btnSubmit)
+        .click(homePage.myTutorials)
+        .typeText(homePage.search, title)
+        .click(homePage.btnSearch);
     //Assert
+    await t.expect(homePage.listTutorials.innerText).contains(title);
 });
