@@ -4,11 +4,10 @@ const chanceObj = new Chance();
 export function generatePerson() {
   const username = chanceObj.name().replace(' ', '.').toLowerCase();
   const email = username + '@gmail.com';
-  const password = 'Testing';
-
+  const logOut = 'LogOut';
   return {
     username: username,
     email: email,
-    password: password
+    logOut: logOut
   };
 }
