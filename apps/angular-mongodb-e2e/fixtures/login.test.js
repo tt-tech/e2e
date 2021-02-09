@@ -5,7 +5,7 @@ import {password} from '../utils/constant.util';
 
 fixture('Welcome For login').page(URLS.LOGIN);
 
-test.only('test for login page  ', async t => {
+test('test for login page  ', async t => {
   //Arrange
   const person = generatePerson();
   const userName = 'peter.flowers';
