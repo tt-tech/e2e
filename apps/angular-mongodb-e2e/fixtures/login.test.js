@@ -1,22 +1,22 @@
 import {URLS} from '../utils/route.util';
 import {loginElements} from '../page-objects/login.po';
-import {RegisterElements} from '../page-objects/register.po';
+import {generatePerson} from '../utils/person.util';
+import {password} from '../utils/constant.util';
 
 fixture('Welcome For login').page(URLS.LOGIN);
 
-test.only('test for login ', async t => {
+test('test for login page  ', async t => {
   //Arrange
-  const username = 'adil.benmoussa';
-  const password = 'testing';
-
+  const person = generatePerson();
+  const userName = 'peter.flowers';
   //Act
   await t
-    .typeText(loginElements.username, username)
+    .typeText(loginElements.username, userName)
     .typeText(loginElements.password, password)
     .click(loginElements.btnLogin);
-
-  //Assert
   await t.eval(() => location.reload(true));
-  await t.expect(RegisterElements.helloUser.exists).ok();
-  await t.expect(RegisterElements.helloUser.innerText).contains(username);
+  //Assert
+  await t.expect(loginElements.helloUser.exists).ok();
+  await t.expect(loginElements.helloUser.innerText).contains(userName);
+  await t.expect(loginElements.logOut.innerText).contains(person.logOut);
 });

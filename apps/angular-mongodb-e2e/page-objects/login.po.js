@@ -5,5 +5,6 @@ export const loginElements = {
   email: Selector('#email'),
   password: Selector('#password'),
   btnLogin: Selector('#login'),
-  helloUser: Selector('#hello-user')
+  helloUser: Selector('#hello-user'),
+  logOut: Selector('a').withText('LogOut')
 };

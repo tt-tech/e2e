@@ -2,13 +2,12 @@ const Chance = require('chance');
 const chanceObj = new Chance();
 
 export function generatePerson() {
-  const username = chanceObj.name().toLowerCase();
-  const email = username.replace(' ', '-') + '@gmail.com';
-  const password = 'Testing';
-
+  const username = chanceObj.name().replace(' ', '.').toLowerCase();
+  const email = username + '@gmail.com';
+  const logOut = 'LogOut';
   return {
     username: username,
     email: email,
-    password: password
+    logOut: logOut
   };
 }
