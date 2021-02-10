@@ -20,7 +20,9 @@ export class AuthInterceptor implements HttpInterceptor {
         headers: req.headers.set(TOKEN_HEADER_KEY, token)
       });
     } else {
-      this.router.navigate(['login']);
+      if (this.router.url !== '/register') {
+        this.router.navigate(['login']);
+      }
     }
     return next.handle(authReq);
   }
