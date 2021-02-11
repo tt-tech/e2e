@@ -1,4 +1,4 @@
-import {Selector} from 'testcafe';
+import {Selector, ClientFunction} from 'testcafe';
 
 export const tutorialsElements = {
   btnAdd: Selector('a').withText('Add'),
@@ -43,4 +43,4 @@ export const deleteTutorials = {
   btnDelete: Selector('button').withText('Delete')
 };
 
-// export const getUrl = ClientFunction(() => window.location.href);
+export const getUrl = ClientFunction(() => window.location.href);
