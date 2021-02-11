@@ -12,11 +12,11 @@ export const tutorialsRoutes = (app: any) => {
   app.get('/api/published', [authJwt.verifyToken], tutorialsCtr.findAllPublished);
 
   // Retrieve a single Tutorial with id
-  app.get('/api/:id', [authJwt.verifyToken], tutorialsCtr.findOne);
+  app.get('/api/tutorials/:id', [authJwt.verifyToken], tutorialsCtr.findOne);
 
   // Update a Tutorial with id
-  app.put('/api/:id', [authJwt.verifyToken], tutorialsCtr.update);
+  app.put('/api/tutorials/:id', [authJwt.verifyToken], tutorialsCtr.update);
 
   // Delete a Tutorial with id
-  app.delete('/api/:id', [authJwt.verifyToken], tutorialsCtr.remove);
+  app.delete('/api/tutorials/:id', [authJwt.verifyToken], tutorialsCtr.remove);
 };
