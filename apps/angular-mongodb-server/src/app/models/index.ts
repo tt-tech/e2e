@@ -8,7 +8,7 @@ mongoose.Promise = global.Promise;
 
 const db: any = {};
 db.mongoose = mongoose;
-db.url = uri;
+db.url = uri();
 db.tutorials = Tutorial;
 db.user = User;
 db.role = Role;
