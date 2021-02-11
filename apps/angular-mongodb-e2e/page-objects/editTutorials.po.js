@@ -20,7 +20,7 @@ export const updateToturial = {
 
 export const publishedTutorials = {
     Tutorials: Selector('a').withText('Tutorials'),
-    listTutorial: Selector('ul.list-group').child('li').nth(1),
+    listTutorial: Selector('ul.list-group').child('li').nth(0),
     btnEdit: Selector('a').withText('Edit'),
     btnPublish: Selector('button').withText('Publish'),
     status: Selector('div.form-group').withText('Published'),
@@ -29,7 +29,7 @@ export const publishedTutorials = {
 
 export const UnPublishedTutorials = {
     Tutorials: Selector('a').withText('Tutorials'),
-    listTutorial: Selector('ul.list-group').child('li').nth(1),
+    listTutorial: Selector('ul.list-group').child('li').nth(0),
     btnEdit: Selector('a').withText('Edit'),
     btnPublish: Selector('button').withText('Publish'),
     status: Selector('div.form-group').withText('Pending'),
