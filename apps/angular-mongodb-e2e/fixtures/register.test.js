@@ -8,6 +8,7 @@ fixture('Welcome For register page ').page(URLS.REGISTER);
 test('test for new user ', async t => {
   //Arrange
   const person = generatePerson();
+  const msgAccept = 'Your registration is successful!';
   //Act
   await t
     .typeText(registerElements.userName, person.username)
@@ -15,5 +16,5 @@ test('test for new user ', async t => {
     .typeText(registerElements.password, password)
     .click(registerElements.btnRegister);
   //Assert
-  await t.expect(getUrl()).eql(URLS.LOGIN);
+  await t.expect(registerElements.msgSuccess.innerText).contains(msgAccept);
 });
