@@ -1,6 +1,7 @@
 import {URLS} from '../utils/route.util';
 import {loginElements} from '../page-objects/login.po';
 import {password} from '../utils/constant.util';
+import {getUrl} from '../page-objects/editTutorials.po';
 import {
   tutorialsElements,
   updateToturial,
@@ -22,6 +23,7 @@ fixture('Welcome For edit tutorials')
       .click(loginElements.btnLogin);
     await t.eval(() => location.reload(true));
   });
+
 test.before(async t => {
   //Arrange
   const userName = 'peter.flowers';
@@ -59,6 +61,7 @@ test.before(async t => {
   //Assert
   await t.expect(updateToturial.mgsSucces.exists).ok();
 });
+
 test('test for Published Tutorial', async t => {
   //Arrange
   const msgSuccess = 'Tutorial was updated successfully.';
@@ -78,7 +81,6 @@ test('test for UnPublished Tutorial', async t => {
   const msgSuccess = 'Tutorial was updated successfully.';
   //Act
   await t
-
     .click(UnPublishedTutorials.Tutorials)
     .click(UnPublishedTutorials.listTutorial)
     .click(UnPublishedTutorials.btnEdit)
@@ -88,14 +90,15 @@ test('test for UnPublished Tutorial', async t => {
   await t.expect(UnPublishedTutorials.msgAccess.innerText).contains(msgSuccess);
 });
 
-test('test fro delete tutorials ', async t => {
+test('test for delete tutorials ', async t => {
   //Arrange
-
+  const url = 'http://localhost:4200/#/tutorials';
   //Act
   await t
-
     .click(deleteTutorials.Tutorials)
     .click(deleteTutorials.listTutorial)
     .click(deleteTutorials.btnEdit)
     .click(deleteTutorials.btnDelete);
+  //Assert
+  await t.expect(getUrl()).eql(url);
 });
