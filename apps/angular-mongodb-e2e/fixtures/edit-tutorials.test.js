@@ -9,7 +9,6 @@ import {
   UnPublishedTutorials,
   deleteTutorials
 } from '../page-objects/edit-tutorials.po';
-import {createTextChangeRange} from 'typescript';
 
 fixture('Welcome For edit tutorials')
   .page(URLS.LOGIN)
