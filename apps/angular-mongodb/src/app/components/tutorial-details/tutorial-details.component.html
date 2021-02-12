@@ -50,8 +50,11 @@
       Update
     </button>
   </div>
-  <div>
+  <div class="edit-form">
     <p>{{ message }}</p>
+  </div>
+  <div *ngIf="deleted" class="edit-form">
+    <button class="badge badge-danger mr-2" (click)="pageHome()">My Tutorals App</button>
   </div>
   <div *ngIf="!currentTutorial.id">
     <br />
