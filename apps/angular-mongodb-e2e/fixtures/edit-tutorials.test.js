@@ -1,6 +1,6 @@
 import {URLS} from '../utils/route.util';
 import {loginElements} from '../page-objects/login.po';
-import {password} from '../utils/constant.util';
+import {password, userName} from '../utils/constant.util';
 import {getUrl} from '../page-objects/edit-tutorials.po';
 import {
   tutorialsElements,
@@ -13,15 +13,14 @@ import {
 fixture('Welcome For edit tutorials')
   .page(URLS.LOGIN)
 
-  .beforeEach(async ctx => {
+  .beforeEach(async t => {
     //Arrange
-    ctx.userName = 'peter.flowers';
     //Act
-    await ctx
-      .typeText(loginElements.username, ctx.userName)
+    await t
+      .typeText(loginElements.username, userName)
       .typeText(loginElements.password, password)
       .click(loginElements.btnLogin);
-    await ctx.eval(() => location.reload(true));
+    await t.eval(() => location.reload(true));
   });
 
 test('test for add tutorials', async t => {
