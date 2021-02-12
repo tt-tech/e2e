@@ -40,7 +40,6 @@ export const deleteTutorials = {
   Tutorials: Selector('a').withText('Tutorials'),
   listTutorial: Selector('ul.list-group').child('li').nth(0),
   btnEdit: Selector('a').withText('Edit'),
-  btnDelete: Selector('button').withText('Delete')
+  btnDelete: Selector('button').withText('Delete'),
+  msgSucces: Selector('div').child('p')
 };
-
-export const getUrl = ClientFunction(() => window.location.href);
