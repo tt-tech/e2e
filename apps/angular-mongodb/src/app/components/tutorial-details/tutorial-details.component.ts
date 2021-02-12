@@ -83,4 +83,7 @@ export class TutorialDetailsComponent implements OnInit {
       }
     );
   }
+  pageHome(): void {
+    this.router.navigate(['/tutorials/']);
+  }
 }
