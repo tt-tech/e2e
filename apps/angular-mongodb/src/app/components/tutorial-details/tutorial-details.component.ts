@@ -74,7 +74,8 @@ export class TutorialDetailsComponent implements OnInit {
     this.tutorialService.delete(this.currentTutorial.id).subscribe(
       response => {
         console.log(response);
-        this.router.navigate(['/tutorials']);
+        //this.router.navigate(['/tutorials/']);
+        this.message=response.message;
       },
       error => {
         console.log(error);
