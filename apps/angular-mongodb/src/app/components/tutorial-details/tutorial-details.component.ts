@@ -15,7 +15,7 @@ export class TutorialDetailsComponent implements OnInit {
     published: false
   };
   message = '';
-
+  deleted = false;
   constructor(
     private tutorialService: TutorialService,
     private route: ActivatedRoute,
@@ -74,11 +74,16 @@ export class TutorialDetailsComponent implements OnInit {
     this.tutorialService.delete(this.currentTutorial.id).subscribe(
       response => {
         console.log(response);
-        this.router.navigate(['/tutorials']);
+        this.deleted = true;
+        this.message = response.message;
       },
       error => {
         console.log(error);
+        alert(error.message);
       }
     );
+  }
+  pageHome(): void {
+    this.router.navigate(['/tutorials/']);
   }
 }

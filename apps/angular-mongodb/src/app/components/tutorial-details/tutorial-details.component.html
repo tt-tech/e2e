@@ -1,5 +1,5 @@
 <div>
-  <div *ngIf="currentTutorial.id" class="edit-form">
+  <div *ngIf="currentTutorial.id && !deleted" class="edit-form">
     <h4>Tutorial</h4>
     <form>
       <div class="form-group">
@@ -49,9 +49,13 @@
     <button type="submit" class="badge badge-success mb-2" (click)="updateTutorial()">
       Update
     </button>
+  </div>
+  <div class="edit-form">
     <p>{{ message }}</p>
   </div>
-
+  <div *ngIf="deleted" class="edit-form">
+    <button class="badge badge-danger mr-2" (click)="pageHome()">My Tutorals App</button>
+  </div>
   <div *ngIf="!currentTutorial.id">
     <br />
     <p>Cannot access this Tutorial...</p>

@@ -1,7 +1,6 @@
 import {URLS} from '../utils/route.util';
 import {loginElements} from '../page-objects/login.po';
 import {password, userName} from '../utils/constant.util';
-import {getUrl} from '../page-objects/edit-tutorials.po';
 import {
   tutorialsElements,
   updateToturial,
@@ -93,6 +92,7 @@ test('test for UnPublished Tutorial', async t => {
 test('test for delete tutorials ', async t => {
   //Arrange
   const url = 'http://localhost:4200/#/tutorials';
+  const msgSucces = 'Tutorial was deleted successfully!';
   //Act
   await t
     .click(deleteTutorials.Tutorials)
@@ -100,5 +100,5 @@ test('test for delete tutorials ', async t => {
     .click(deleteTutorials.btnEdit)
     .click(deleteTutorials.btnDelete);
   //Assert
-  await t.expect(getUrl()).eql(url);
+  await t.expect(deleteTutorials.msgSucces.innerText).contains(msgSucces);
 });
